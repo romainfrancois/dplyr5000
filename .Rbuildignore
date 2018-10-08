@@ -1,0 +1,4 @@
+^data-raw$
+^LICENSE\.md$
+^dplyr5000\.Rproj$
+^\.Rproj\.user$
