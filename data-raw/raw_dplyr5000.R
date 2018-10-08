@@ -24,8 +24,9 @@ builds_tbl <- function(limit = 100, offset = 0) {
   )
 }
 
-builds <- map_dfr(1:50, ~ {
+dplyr5000 <- map_dfr(1:50, ~ {
     cat("\r", .)
     builds_tbl(offset = (.x - 1) * 100)
   })
 
+use_data(dplyr5000, overwrite = TRUE)
