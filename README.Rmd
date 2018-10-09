@@ -18,12 +18,30 @@ The package contains a tibble with 5000 rows, one for each of the first 5000
 travis builds of [dplyr](https://github.com/tidyverse/dplyr). 
 
 ```{r}
-library(dplyr)
+library(tidyverse)
+library(lubridate)
 # remotes::install_github("romainfrancois/dplyr5000")
 library(dplyr5000)
 
 dplyr5000 %>% 
   group_by(state) %>% 
   tally(sort = TRUE)
+
+# monthly builds
+dplyr5000 %>% 
+  group_by(month = ymd(format(finished_at, "%Y-%m-15"))) %>% 
+  tally() %>% 
+  ggplot(aes(month, n)) + 
+  geom_point() + 
+  geom_smooth(method = loess, formula = y ~ x) + 
+  labs(
+    title = "Monthly #dplyr travis builds",
+    subtitle = "source: https//github.com/romainfrancois/dplyr5000"
+  ) + 
+  xlab("") + ylab("")
 ```
+
+
+
+
 
