@@ -3,7 +3,6 @@ Title: Data from the 5000 first builds of dplyr
 Version: 0.0.0.9000
 Authors@R: person("Romain", "François", email = "romain@rstudio.com", role = c("aut", "cre"))
 Description: Data from the 5000 first builds of dplyr
-Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
