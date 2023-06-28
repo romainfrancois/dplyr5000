@@ -1,7 +1,7 @@
 Package: dplyr5000
 Title: Data from the 5000 first builds of dplyr
 Version: 0.0.0.9000
-Authors@R: person("Romain", "François", email = "romain@rstudio.com", role = c("aut", "cre"))
+Authors@R: person("Romain", "François", email = "romain@purrple.cat", role = c("aut", "cre"))
 Description: Data from the 5000 first builds of dplyr
 License: MIT + file LICENSE
 Encoding: UTF-8
